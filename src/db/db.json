@@ -1,0 +1,262 @@
+{
+  "users": [],
+  "categories": [
+    {
+      "id": 1,
+      "cat": "sofa"
+    },
+    {
+      "id": 2,
+      "cat": "chair"
+    },
+    {
+      "id": 3,
+      "cat": "bed"
+    },
+    {
+      "id": 4,
+      "cat": "table"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "image": "assets/sofas/1.jpg",
+      "desc": "Gray comfortable sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 2,
+      "image": "assets/sofas/1.jpg",
+      "desc": "another sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa",
+      "img": "assets/sofas/1.jpg"
+    },
+    {
+      "id": 3,
+      "image": "assets/sofas/3.jpg",
+      "desc": "Elegant red sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 4,
+      "image": "assets/sofas/4.jpg",
+      "desc": "Wide sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 5,
+      "image": "assets/sofas/5.jpg",
+      "desc": "Sofa with many pillows",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 6,
+      "image": "assets/chairs/1.jpg",
+      "desc": "Black rigid chair",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": false,
+      "cat": "chair"
+    },
+    {
+      "id": 7,
+      "image": "assets/chairs/2.jpg",
+      "desc": "Woden chair",
+      "price": "$60.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "chair",
+      "img": "assets/chairs/2.jpg"
+    },
+    {
+      "id": 8,
+      "image": "assets/chairs/3.jpg",
+      "desc": "White small chair",
+      "price": "$1.00",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "chair",
+      "img": "assets/chairs/3.jpg"
+    },
+    {
+      "id": 9,
+      "image": "assets/chairs/4.jpg",
+      "desc": "Long legs chair",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "chair"
+    },
+    {
+      "id": 10,
+      "reviews": 0,
+      "starts": 0,
+      "fav": true,
+      "desc": "new product ",
+      "cat": "table",
+      "price": "$10.00",
+      "image": "https://i.ibb.co/23NGzKBt/4228295-24967.jpg"
+    },
+    {
+      "id": 11,
+      "reviews": 0,
+      "starts": 0,
+      "fav": false,
+      "desc": "newest product 11",
+      "cat": "sofa",
+      "price": "$500",
+      "image": "https://i.ibb.co/tMGZwN1C/21300732-f0je-cm9y-210621.jpg"
+    }
+  ],
+  "cartItems": [
+    {
+      "id": 1,
+      "image": "assets/sofas/1.jpg",
+      "desc": "Gray comfortable sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa",
+      "quantity": 7
+    },
+    {
+      "id": 3,
+      "image": "assets/sofas/3.jpg",
+      "desc": "Elegant red sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": false,
+      "cat": "sofa",
+      "quantity": 2
+    }
+  ],
+  "favourites": [
+    {
+      "id": 7,
+      "image": "assets/chairs/2.jpg",
+      "desc": "Woden chair",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "chair"
+    },
+    {
+      "id": 9,
+      "image": "assets/chairs/4.jpg",
+      "desc": "Long legs chair",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "chair"
+    },
+    {
+      "id": 5,
+      "image": "assets/sofas/5.jpg",
+      "desc": "Sofa with many pillows",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 1,
+      "image": "assets/sofas/1.jpg",
+      "desc": "Gray comfortable sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 2,
+      "image": "assets/sofas/2.jpg",
+      "desc": "Cozy sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 10,
+      "reviews": 0,
+      "starts": 0,
+      "fav": true,
+      "desc": "new product ",
+      "cat": "table",
+      "price": "$10.00",
+      "image": "https://i.ibb.co/23NGzKBt/4228295-24967.jpg"
+    },
+    {
+      "id": 4,
+      "image": "assets/sofas/4.jpg",
+      "desc": "Wide sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 3,
+      "image": "assets/sofas/3.jpg",
+      "desc": "Elegant red sofa",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "sofa"
+    },
+    {
+      "id": 8,
+      "image": "assets/chairs/3.jpg",
+      "desc": "White small chair",
+      "price": "$1.00",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "chair",
+      "img": "assets/chairs/3.jpg"
+    }
+  ],
+  "profiles": [
+    {
+      "name": "asem",
+      "role": "CMO at SingleFire",
+      "about": "Im asem",
+      "avatar": "https://i.ibb.co/rGTksssn/as.webp",
+      "id": 1
+    }
+  ]
+}
