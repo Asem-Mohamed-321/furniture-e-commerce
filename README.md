@@ -1,59 +1,45 @@
-# Project
+# 📝 Furniture e-commerce
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+A simple e-commerce built using Angular.js and JSON Server (with json-server-auth) as a mock backend. (fully client side until now)
 
-## Development server
+## ✨ Features
 
-To start a local development server, run:
 
-```bash
-ng serve
+🔐 Products – view products, add to favorite, and add to Cart
+
+📝 Products Management – Create, view, and delete blog posts
+
+👤 User Profiles – Edit and customize user page
+
+♾️ Pagination 
+
+
+## 📦 Setup Instructions
+#### 1. Clone the repository:
+
+```
+https://github.com/Asem-Mohamed-321/furniture-e-commerce
+cd blog-web-app
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+#### 2. Install dependencies:
 
-## Code scaffolding
+```
+npm install
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+```
+#### 3. Start JSON Server:
 
-```bash
-ng generate component component-name
+```
+npx json-server src/db/db.json
+```
+#### 4. Start the app:
+
+```
+ng serve -o
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📽️ Demo Link :
+https://drive.google.com/file/d/1-OEmaywPf6mRpSncd-fqSI_APBL8j9_h/view?usp=sharing
+## 📌 Thanks To 
+#### Eng/Mostafa Mahmoud
