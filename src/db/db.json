@@ -23,7 +23,7 @@
       "id": 1,
       "image": "assets/sofas/1.jpg",
       "desc": "Gray comfortable sofa",
-      "price": "$129.99",
+      "price": "$99.99",
       "reviews": 600,
       "starts": 5,
       "fav": true,
@@ -31,14 +31,13 @@
     },
     {
       "id": 2,
-      "image": "assets/sofas/1.jpg",
-      "desc": "another sofa",
-      "price": "$129.99",
+      "image": "assets/sofas/2.jpg",
+      "desc": "modern-design sofa",
+      "price": "$150.99",
       "reviews": 600,
       "starts": 5,
-      "fav": true,
-      "cat": "sofa",
-      "img": "assets/sofas/1.jpg"
+      "fav": false,
+      "cat": "sofa"
     },
     {
       "id": 3,
@@ -53,18 +52,18 @@
     {
       "id": 4,
       "image": "assets/sofas/4.jpg",
-      "desc": "Wide sofa",
-      "price": "$129.99",
+      "desc": "Sofa with many pillows",
+      "price": "$99.99",
       "reviews": 600,
       "starts": 5,
-      "fav": true,
+      "fav": false,
       "cat": "sofa"
     },
     {
       "id": 5,
       "image": "assets/sofas/5.jpg",
-      "desc": "Sofa with many pillows",
-      "price": "$129.99",
+      "desc": "Wide brown sofa",
+      "price": "$79.99",
       "reviews": 600,
       "starts": 5,
       "fav": true,
@@ -114,49 +113,77 @@
     },
     {
       "id": 10,
-      "reviews": 0,
-      "starts": 0,
-      "fav": true,
-      "desc": "new product ",
-      "cat": "table",
-      "price": "$10.00",
-      "image": "https://i.ibb.co/23NGzKBt/4228295-24967.jpg"
+      "image": "assets/beds/1.jpg",
+      "desc": "King size bed",
+      "price": "$129.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": false,
+      "cat": "bed"
     },
     {
       "id": 11,
-      "reviews": 0,
-      "starts": 0,
-      "fav": false,
-      "desc": "newest product 11",
-      "cat": "sofa",
-      "price": "$500",
-      "image": "https://i.ibb.co/tMGZwN1C/21300732-f0je-cm9y-210621.jpg"
-    }
-  ],
-  "cartItems": [
-    {
-      "id": 10,
-      "reviews": 0,
-      "starts": 0,
+      "image": "assets/beds/2.jpg",
+      "desc": "Larg size king bed",
+      "price": "$199.99",
+      "reviews": 600,
+      "starts": 5,
       "fav": true,
-      "desc": "new product ",
-      "cat": "table",
-      "price": "$10.00",
-      "image": "https://i.ibb.co/23NGzKBt/4228295-24967.jpg",
-      "quantity": 1
+      "cat": "bed"
     },
     {
-      "id": 9,
-      "image": "assets/chairs/4.jpg",
-      "desc": "Long legs chair",
+      "id": 12,
+      "image": "assets/beds/3.jpg",
+      "desc": "comfortable white bed",
       "price": "$129.99",
       "reviews": 600,
       "starts": 5,
       "fav": true,
-      "cat": "chair",
-      "quantity": 1
+      "cat": "bed"
+    },
+    {
+      "id": 13,
+      "image": "assets/beds/4.jpg",
+      "desc": "double king-sized bed",
+      "price": "$299.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "bed"
+    },
+    {
+      "id": 14,
+      "image": "assets/desks/1.jpg",
+      "desc": "Wide woden desk",
+      "price": "$70.00",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "table"
+    },
+    {
+      "id": 15,
+      "image": "assets/desks/2.jpg",
+      "desc": "White desk",
+      "price": "$70.00",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "table"
+    },
+    {
+      "id": 16,
+      "image": "assets/desks/3.jpg",
+      "desc": "Neat desk with metal legs",
+      "price": "$59.99",
+      "reviews": 600,
+      "starts": 5,
+      "fav": true,
+      "cat": "table"
     }
+    
   ],
+  "cartItems": [],
   "favourites": [
     {
       "id": 7,
@@ -199,34 +226,15 @@
       "cat": "sofa"
     },
     {
-      "id": 2,
-      "image": "assets/sofas/2.jpg",
-      "desc": "Cozy sofa",
-      "price": "$129.99",
+      "id": 8,
+      "image": "assets/chairs/3.jpg",
+      "desc": "White small chair",
+      "price": "$1.00",
       "reviews": 600,
       "starts": 5,
       "fav": true,
-      "cat": "sofa"
-    },
-    {
-      "id": 10,
-      "reviews": 0,
-      "starts": 0,
-      "fav": true,
-      "desc": "new product ",
-      "cat": "table",
-      "price": "$10.00",
-      "image": "https://i.ibb.co/23NGzKBt/4228295-24967.jpg"
-    },
-    {
-      "id": 4,
-      "image": "assets/sofas/4.jpg",
-      "desc": "Wide sofa",
-      "price": "$129.99",
-      "reviews": 600,
-      "starts": 5,
-      "fav": true,
-      "cat": "sofa"
+      "cat": "chair",
+      "img": "assets/chairs/3.jpg"
     },
     {
       "id": 3,
@@ -237,25 +245,14 @@
       "starts": 5,
       "fav": true,
       "cat": "sofa"
-    },
-    {
-      "id": 8,
-      "image": "assets/chairs/3.jpg",
-      "desc": "White small chair",
-      "price": "$1.00",
-      "reviews": 600,
-      "starts": 5,
-      "fav": true,
-      "cat": "chair",
-      "img": "assets/chairs/3.jpg"
     }
   ],
   "profiles": [
     {
       "name": "asem",
-      "role": "CMO at SingleFire",
-      "about": "Im asem new",
-      "avatar": "https://i.ibb.co/rGTksssn/as.webp",
+      "role": "ITI student",
+      "about": "This is my description",
+      "avatar": "https://i.ibb.co/k2x5sN7D/me.jpg",
       "id": 1
     }
   ]
