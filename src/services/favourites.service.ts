@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Product } from '../app/models/product.model';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -11,8 +13,8 @@ export class FavouritesService {
 
   constructor(private http : HttpClient) { }
 
-  getAllItems(){
-    return this.http.get(this.URL)
+  getAllItems():Observable<Product[]> {
+    return this.http.get<Product[]>(this.URL)
   }
 
    AddToFav(item:any){

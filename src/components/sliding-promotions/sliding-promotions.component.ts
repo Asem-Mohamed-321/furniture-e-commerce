@@ -10,19 +10,20 @@ import { Component } from '@angular/core';
 export class SlidingPromotionsComponent {
 products = [
   {
-    image: 'assets/2.png',
-    title: 'Modern Wooden Chair',
-    desc: 'Comfortable and stylish chair made of premium wood.'
+    image: 'assets/chairs/4.jpg',
+    title: 'Long legs chair',
+    desc: 'Brighten your space with this sleek, modern design.'
+
   },
   {
-    image: 'assets/home.webp',
-    title: 'Elegant Sofa Set',
+    image: 'assets/sofas/3.jpg',
+    title: 'Elegant red sofa',
     desc: 'A perfect addition to your living room with luxurious comfort.'
   },
   {
-    image: 'assets/235.jpg',
-    title: 'Minimalist Lamp',
-    desc: 'Brighten your space with this sleek, modern design.'
+    image: 'assets/chairs/3.jpg',
+    title: 'White small chair',
+    desc: 'Comfortable and stylish chair made of premium wood.'
   }
 ];
 

@@ -1,6 +1,6 @@
 <div class="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
       <div class="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
-        @if(!isLoading && favouriteItems.length > 0){
+        @if(!isLoading && favouriteItems && favouriteItems.length > 0){
         <div class="space-y-6">
           @for(item of favouriteItems ;track item.id ){
             <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
@@ -41,7 +41,7 @@
         }
           
         </div>
-      }@else if(!isLoading && favouriteItems.length === 0){
+      }@else if(!isLoading && favouriteItems && favouriteItems.length === 0){
         <div class="text-center">
           <p class="h-auto">Your favourites list is empty ! <img src="https://cdn-icons-png.flaticon.com/512/1076/1076716.png" class=" inline  h-[1.5em]"></p>
         </div>

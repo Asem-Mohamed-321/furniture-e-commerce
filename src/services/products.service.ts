@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Product } from '../app/models/product.model';
+import { Observable } from 'rxjs';
+import { Category } from '../app/models/category.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +12,15 @@ export class ProductsService {
   constructor(private http : HttpClient) {
    }
 
-   getAllProducts(){
-    return this.http.get(this.URL)
+   getAllProducts():Observable<Product[]>{
+    return this.http.get<Product[]>(this.URL)
    }
+
    getOneProducts(id : number){
     return this.http.get(this.URL+"/"+id)
    }
 
-   editProduct(id : number|null,editedProduct : any){
+   editProduct(id : number,editedProduct : any){
     return this.http.put("http://localhost:3000/products/"+id,editedProduct)
   }
 
@@ -24,12 +28,12 @@ export class ProductsService {
     return this.http.delete("http://localhost:3000/products/"+id)
   }
 
-  addProduct(newProduct :any){
-    return this.http.post("http://localhost:3000/products/",newProduct)
+  addProduct(newProduct :Product):Observable<Product>{
+    return this.http.post<Product>("http://localhost:3000/products/",newProduct)
   }
 
-  getCategories(){
-    return this.http.get("http://localhost:3000/categories")
+  getCategories():Observable<Category[]>{
+    return this.http.get<Category[]>("http://localhost:3000/categories")
   }
 
   //  fav(item:any){

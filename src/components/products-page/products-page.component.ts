@@ -6,6 +6,8 @@ import { FavouritesService } from '../../services/favourites.service';
 import { CommonModule } from '@angular/common';
 import { FormGroup , FormControl, ReactiveFormsModule } from '@angular/forms';
 import {getImageURL} from '../../js/imageApi.js'
+import { Product } from '../../app/models/product.model';
+import { Category } from '../../app/models/category.model';
 
 
 
@@ -17,257 +19,29 @@ import {getImageURL} from '../../js/imageApi.js'
   styleUrl: './products-page.component.css'
 })
 export class ProductsPageComponent {
-//   products = [
-//   {
-//     "id" : 1,
-//     "title": "Dining Table",
-//     "category": "Table",
-//     "desc": "Elegant table made of high-quality wood.",
-//     "rating": 4.6,
-//     "reviews": 515,
-//     "badges": ["Fast Delivery", "Best Price"],
-//     "price": "$801",
-//     "image": "https://images.pexels.com/photos/1866148/pexels-photo-1866148.jpeg",
-//     "discount": "Up to 20% off",
-//     "quickLook": true,
-//     "favorite": true
-//   },
-//   {
-//     "id" : 2,
-//     "title": "Sectional Sofa",
-//     "category": "Sofa",
-//     "desc": "Spacious and soft sofa, ideal for family and guests.",
-//     "rating": 4.6,
-//     "reviews": 485,
-//     "badges": ["Fast Delivery", "Best Price"],
-//     "price": "$760",
-//     "image": "https://images.pexels.com/photos/1866148/pexels-photo-1866148.jpeg",
-//     "discount": "Up to 20% off",
-//     "quickLook": true,
-//     "favorite": true
-//   },
-//   {
-//     "id" : 3,
-//     "title": "3-Seater Sofa",
-//     "category": "Sofa",
-//     "desc": "Spacious and soft sofa, ideal for family and guests.",
-//     "rating": 4.6,
-//     "reviews": 323,
-//     "badges": ["Fast Delivery", "Best Price"],
-//     "price": "$710",
-//     "image": "https://images.pexels.com/photos/1866147/pexels-photo-1866147.jpeg",
-//     "discount": "Up to 25% off",
-//     "quickLook": true,
-//     "favorite": true
-//   },
-//   {
-//     "id" : 4,
-//     "title": "Dining Table",
-//     "category": "Table",
-//     "desc": "Elegant table made of high-quality wood.",
-//     "rating": 4.8,
-//     "reviews": 373,
-//     "badges": ["Fast Delivery", "Best Price"],
-//     "price": "$685",
-//     "image": "https://images.pexels.com/photos/1866148/pexels-photo-1866148.jpeg",
-//     "discount": "Up to 35% off",
-//     "quickLook": true,
-//     "favorite": true
-//   },
-//   {
-//     "id" : 5,
-//     "title": "King Bed",
-//     "category": "Bed",
-//     "desc": "Cozy and supportive bed for a perfect night's sleep.",
-//     "rating": 4.7,
-//     "reviews": 599,
-//     "badges": ["Fast Delivery", "Best Price"],
-//     "price": "$881",
-//     "image": "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg",
-//     "discount": "Up to 40% off",
-//     "quickLook": true,
-//     "favorite": true
-//   }
-// ]
-
-
-// products = [
-//   {
-//     id: 1,
-//     image: 'https://picsum.photos/200?random=1',
-//     desc: 'Stylish Headphones',
-//     price: "$49.99",
-//     reviews: 600,
-//     starts: 5,
-//   },
-//   {
-//     id: 2,
-//     image: 'https://picsum.photos/200?random=2',
-//     desc: 'Modern Smartwatch',
-//     price: "$99.99",
-//     reviews: 600,
-//     starts: 3,
-//   },
-//   {
-//     id: 3,
-//     image: 'https://picsum.photos/200?random=3',
-//     desc: 'Wireless Earbuds',
-//     price: "$59.99",
-//     reviews: 600,
-//     starts: 1,
-//   },
-//   {
-//     id: 4,
-//     image: 'https://picsum.photos/200?random=4',
-//     desc: 'Fitness Tracker',
-//     price: "$79.99",
-//     reviews: 600,
-//     starts: 5,
-//   },
-//   {
-//     id: 5,
-//     image: 'https://picsum.photos/200?random=5',
-//     desc: 'Bluetooth Speaker',
-//     price: "$39.99",
-//     reviews: 600,
-//     starts: 4,
-
-//   },
-//   {
-//     id: 6,
-//     image: 'https://picsum.photos/200?random=6',
-//     desc: 'Compact Camera',
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//   }
-// ];
-
-// products = [
-//   {
-//     id : 1,
-//     image : 'assets/sofas/1.jpg',
-//     desc: "Gray comfortable sofa",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "sofa"
-//   },
-//   {
-//     id : 2,
-//     image : 'assets/sofas/2.jpg',
-//     desc: "Cozy sofa",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "sofa"
-//   },
-//   {
-//     id : 3,
-//     image : 'assets/sofas/3.jpg',
-//     desc: "Elegant red sofa",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "sofa"
-//   },
-//   {
-//     id : 4,
-//     image : 'assets/sofas/4.jpg',
-//     desc: "Wide sofa",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "sofa"
-//   },
-//   {
-//     id : 5,
-//     image : 'assets/sofas/5.jpg',
-//     desc: "Sofa with many pillows",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "sofa"
-//   },
-//   {
-//     id : 6,
-//     image : 'assets/chairs/1.jpg',
-//     desc: "Black rigid chair",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "chair"
-//   },
-//   {
-//     id : 7,
-//     image : 'assets/chairs/2.jpg',
-//     desc: "Woden chair",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "chair"
-//   },
-//   {
-//     id : 8,
-//     image : 'assets/chairs/3.jpg',
-//     desc: "White small chair",
-//     price: "$0.00",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "chair"
-//   },
-//   {
-//     id : 9,
-//     image : 'assets/chairs/4.jpg',
-//     desc: "Long legs chair",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "chair"
-//   },
-//   {
-//     id : 10,
-//     image : 'assets/chairs/6.jpg',
-//     desc: "Cozy chair",
-//     price: "$129.99",
-//     reviews: 600,
-//     starts: 5,
-//     cat: "chair"
-//   }
-// ]
-products : any=[
-  {
-    id : 10,
-    image : 'assets/chairs/6.jpg',
-    desc: "Cozy chair",
-    price: "$129.99",
-    reviews: 600,
-    starts: 5,
-    cat: "chair"
-  }
-]
+products : Product[] | null = null
 categories : any
 
 constructor( private productService : ProductsService ,private cartService : CartService,private favService : FavouritesService ,public router: Router){}
 
 ngOnInit(){
   this.productService.getAllProducts().subscribe({
-    next:(data)=>{this.products = data},
+    next:(data:Product[])=>{this.products = data},
     error: (err)=>{console.log(err)}
   })
   this.productService.getCategories().subscribe({
-    next: (data)=>{this.categories = data},
+    next: (data:Category[])=>{this.categories = data},
     error: (err)=> console.log(err)
   })
 }
 
-addProductToCart(item:any){
+addProductToCart(item:Product){
   this.cartService.AddToCart(item)
   this.showToast("item was added to the cart successfully");
   this.cartService.updateCartCount()
 }
 
-addToFav(item:any){
+addToFav(item:Product){
   this.favService.AddToFav(item)
 }
 
@@ -278,7 +52,7 @@ toggleMenu(id:number){
 
 
 selectedProductId: number | null = null;
-selectedProductObject : any
+selectedProductObject : Product|null = null
 isModalOpen = false;
 
 openModal(id: number) {
@@ -286,14 +60,14 @@ openModal(id: number) {
   this.selectedProductId = id;
   this.isModalOpen = true;
   // console.log("opened modal for id : ",id)
-  const data = this.products.find((p:any)=>p.id === id)
+  const data = this.products?.find((p:Product)=>p.id === id) || null
   this.selectedProductObject = data;
   console.log(this.selectedProductObject)
   this.myForm.patchValue({
-          desc: this.selectedProductObject.desc,
-          price: this.selectedProductObject.price,
-          cat: this.selectedProductObject.cat,
-          image: this.selectedProductObject.image,
+          desc: this.selectedProductObject!.desc,
+          price: this.selectedProductObject!.price,
+          cat: this.selectedProductObject!.cat,
+          image: this.selectedProductObject!.image,
   });
   console.log(this.myForm.value)
 
@@ -309,8 +83,13 @@ closeModal() {
 
 
 editProduct(){
+    if (!this.selectedProductObject || this.selectedProductId === null) {
+      console.error("Missing selected product data.");
+      return;
+    }
+
     const editedValues = this.myForm.value
-    const editedProduct = {...this.selectedProductObject,...editedValues}
+    const editedProduct = {...this.selectedProductObject,...editedValues,id: this.selectedProductObject.id}
     const priceRegex = /^\$\d+(\.\d{2})?$/;
 
     if (!priceRegex.test(editedValues.price)) {
@@ -318,12 +97,13 @@ editProduct(){
       return;
     }
     console.log(editedProduct);
+    if(this.selectedProductId){
     this.productService.editProduct(this.selectedProductId,editedProduct).subscribe({
       next: ()=>{
         
-        const index = this.products.findIndex((p:any) => p.id === editedProduct.id);
+        const index = this.products?.findIndex((p:Product) => p.id === editedProduct.id);
 
-        if (index !== -1) {
+        if (index !== -1 && index != undefined && this.products) {
           this.products[index] = { ...editedProduct };
         }
         console.log("successfully edited",this.selectedProductId);
@@ -332,7 +112,7 @@ editProduct(){
       error: (err)=>{console.log(err)}
     });
     console.log("successfully edited",this.selectedProductId);
-}
+}}
 
 
   isLoading = true;
@@ -376,7 +156,7 @@ confirmDelete() {
     console.log('Deleting product with ID:', this.selectedProductId);
     
     this.productService.deleteProduct(this.selectedProductId).subscribe();
-    this.products = this.products.filter((p: any) => p.id !== this.selectedProductId);
+    if (this.products) this.products = this.products?.filter((p: Product) => p.id !== this.selectedProductId);
     this.showDeleteModal = false;
     this.selectedProductId = null;
   }
@@ -404,7 +184,12 @@ closeNewProductModal() {
 addNewProduct(){
   console.log("product added")
 
+  
   const { nP_desc, nP_cat, nP_price, nP_image } = this.newProductForm.value;
+  if (!nP_desc || !nP_cat || !nP_price || !nP_image) {
+    alert("All fields are required.");
+    return;
+  }
 
   const newProductValues = {
     desc: nP_desc,
@@ -413,7 +198,8 @@ addNewProduct(){
     image: nP_image
   };
 
-  const maxId = this.products.reduce((max:number, p:any) => Math.max(max, p.id), 0); //getting the highest id and adding one to it which turned out to be the safest solution
+ 
+  const maxId = this.products && this.products.length > 0 ? this.products.reduce((max:number, p:Product) => Math.max(max, p.id), 0): 0; //getting the highest id and adding one to it which turned out to be the safest solution
   const newId = maxId + 1;
   const newProduct = {
       id : newId,
@@ -431,7 +217,7 @@ addNewProduct(){
     }
 
     this.productService.addProduct(newProduct).subscribe({
-      next: (data)=>{this.products.push(data),this.closeNewProductModal()},
+      next: (data:Product)=>{this.products?.push(data),this.closeNewProductModal()},
       error: (err)=>{console.log(err)}
     })
     // console.log(newProduct);
@@ -484,20 +270,20 @@ itemsPerPage: number = 12;
 get filteredProducts() {
   let filtered = this.selectedCategories.length === 0
     ? this.products
-    : this.products.filter((p: any) =>
+    : this.products?.filter((p: any) =>
         this.selectedCategories.includes(p.cat)
       );
 
   // Pagination logic
   const start = (this.currentPage - 1) * this.itemsPerPage;
   const end = start + this.itemsPerPage;
-  return filtered.slice(start, end);
+  return filtered?.slice(start, end);
 }
 
 get totalPages(): number[] {
   const filtered = this.selectedCategories.length === 0
-    ? this.products
-    : this.products.filter((p: any) =>
+    ? this.products??[]
+    : (this.products??[]).filter((p: any) =>
         this.selectedCategories.includes(p.cat)
       );
   return Array(Math.ceil(filtered.length / this.itemsPerPage))

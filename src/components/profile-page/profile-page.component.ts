@@ -3,6 +3,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { ProfileService } from '../../services/profile.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { Profile } from '../../app/models/profile.model';
 
 @Component({
   selector: 'app-profile-page',
@@ -16,7 +17,7 @@ export class ProfilePageComponent {
 
   constructor(private profileService : ProfileService,private router: Router){}
   
-  profile:any ; 
+  profile:Profile|null = null ; 
   ngOnInit(){
     this.loadProfile();
 

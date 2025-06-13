@@ -135,26 +135,26 @@
   ],
   "cartItems": [
     {
-      "id": 1,
-      "image": "assets/sofas/1.jpg",
-      "desc": "Gray comfortable sofa",
+      "id": 10,
+      "reviews": 0,
+      "starts": 0,
+      "fav": true,
+      "desc": "new product ",
+      "cat": "table",
+      "price": "$10.00",
+      "image": "https://i.ibb.co/23NGzKBt/4228295-24967.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "image": "assets/chairs/4.jpg",
+      "desc": "Long legs chair",
       "price": "$129.99",
       "reviews": 600,
       "starts": 5,
       "fav": true,
-      "cat": "sofa",
-      "quantity": 7
-    },
-    {
-      "id": 3,
-      "image": "assets/sofas/3.jpg",
-      "desc": "Elegant red sofa",
-      "price": "$129.99",
-      "reviews": 600,
-      "starts": 5,
-      "fav": false,
-      "cat": "sofa",
-      "quantity": 2
+      "cat": "chair",
+      "quantity": 1
     }
   ],
   "favourites": [
@@ -254,7 +254,7 @@
     {
       "name": "asem",
       "role": "CMO at SingleFire",
-      "about": "Im asem",
+      "about": "Im asem new",
       "avatar": "https://i.ibb.co/rGTksssn/as.webp",
       "id": 1
     }

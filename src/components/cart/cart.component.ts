@@ -1,35 +1,15 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../services/cart.service';
+import { CartItem } from '../../app/models/cart-item.model';
 
 @Component({
   selector: 'app-cart',
   imports: [],
   templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css'
 })
 export class CartComponent {
-  // cartItems = [
-  //   {
-  //   id : 9,
-  //   image : 'assets/chairs/4.jpg',
-  //   desc: "Long legs chair",
-  //   price: "$129.99",
-  //   reviews: 600,
-  //   starts: 5,
-  //   cat: "chair"
-  // },
-  // {
-  //   id : 6,
-  //   image : 'assets/chairs/1.jpg',
-  //   desc: "Black rigid chair",
-  //   price: "$129.99",
-  //   reviews: 600,
-  //   starts: 5,
-  //   cat: "chair"
-  // },
-  // ]
   constructor(private cartService : CartService){}
-  public cartItems: any ; 
+  public cartItems: CartItem[] =[]; 
   
   
   
@@ -66,7 +46,7 @@ getstorePickUp(): number {
   }
 
 
-  decreaseQuantity(item : any){
+  decreaseQuantity(item : CartItem){
     if (item.quantity > 0) {
       this.cartService.decreaseItem(item).subscribe({
         next: () => {
@@ -79,7 +59,7 @@ getstorePickUp(): number {
     }
   }
 
-  increaseQuantity(item : any){
+  increaseQuantity(item : CartItem){
       this.cartService.increaseItem(item).subscribe({
         next: () => {
           item.quantity++
@@ -89,10 +69,10 @@ getstorePickUp(): number {
       });
   }
 
-  removeItem(item : any){
+  removeItem(item : CartItem){
     this.cartService.removeItem(item).subscribe({
     next: () => {
-      this.cartItems = this.cartItems.filter((ci:any) => ci.id !== item.id);
+      this.cartItems = this.cartItems.filter((ci:CartItem) => ci.id !== item.id);
       this.cartService.updateCartCount()
 
     },

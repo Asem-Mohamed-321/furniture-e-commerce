@@ -4,6 +4,7 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms'
 import {getImageURL} from '../../js/imageApi.js'
 import { Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { Profile } from '../../app/models/profile.model';
 
 
 
@@ -11,7 +12,6 @@ import { Router } from '@angular/router';
   selector: 'app-edit-profile',
   imports: [ReactiveFormsModule],
   templateUrl: './edit-profile.component.html',
-  styleUrl: './edit-profile.component.css'
 })
 export class EditProfileComponent {
   constructor(private profileService : ProfileService,private router: Router){}
@@ -19,7 +19,7 @@ export class EditProfileComponent {
 
 
   isLoading = true;
-  profile:any ; 
+  profile: Profile | null = null ;
   myForm = new FormGroup({
     name :new FormControl(),
     role : new FormControl(),
@@ -29,7 +29,7 @@ export class EditProfileComponent {
   
   ngOnInit(){
     this.profileService.getUser(1).subscribe({
-      next: (data:any)=>{
+      next: (data:Profile)=>{
         console.log(data);
         console.log(data.avatar)
         this.profile=data;this.isLoading=false
@@ -64,11 +64,9 @@ export class EditProfileComponent {
     const imageUrl = await getImageURL(input, true);
     if (imageUrl) {
       this.myForm.patchValue({ avatar: imageUrl });
-      this.profile.avatar = imageUrl;
-    }
+    if (this.profile) {
+        this.profile.avatar = imageUrl;
+      }    }
   }
 }
-
-  
-  
 }
